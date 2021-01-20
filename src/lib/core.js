@@ -4521,13 +4521,13 @@ export default function (context, pluginCallButtons, plugins, lang, options, _re
             const renderHTML = util.createElement('DIV');
             renderHTML.innerHTML = contents;
 
-            const figcaptions = util.getListChildren(renderHTML, function (current) {
-                return /FIGCAPTION/i.test(current.nodeName);
-            });
+            // const figcaptions = util.getListChildren(renderHTML, function (current) {
+            //     return /FIGCAPTION/i.test(current.nodeName);
+            // });
 
-            for (let i = 0, len = figcaptions.length; i < len; i++) {
-                figcaptions[i].removeAttribute('contenteditable');
-            }
+            // for (let i = 0, len = figcaptions.length; i < len; i++) {
+            //     figcaptions[i].removeAttribute('contenteditable');
+            // }
 
             if (options.fullPage && !onlyContents) {
                 const attrs = util.getAttributesToString(this._wd.body, ['contenteditable']);
